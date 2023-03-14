@@ -69,20 +69,32 @@ public class Main {
 
     public static void task6 () {
         System.out.println("Задача 6");
-        int capacity = 79;
-        if (capacity <= 60) {
-            System.out.println("Есть сидячее место");
-        } else if (capacity > 60 && capacity <= 102) {
-            System.out.println("Есть стоячее место");
-        } else {
-            System.out.println("Вагон уже полностью забит");
+        int capacity = 102;
+        int seatsCount = 60;
+        int standingCount = capacity - seatsCount;
+
+        int seatsUsed = 60;
+        int standingUsed = 0;
+        if (seatsUsed < seatsCount) {
+            System.out.println("Есть " + (seatsCount - seatsUsed) + " сидячих мест");
         }
+        if (seatsUsed == seatsCount) {
+            System.out.println("Сидячих мест нет");
+        }
+        if (standingUsed < standingCount){
+            System.out.println("Есть " + (standingCount - standingUsed) + " стоячих мест");
+        }
+        if (standingUsed + seatsUsed > capacity) {
+            System.out.println("Мест нет!");
+        }
+
+
     }
 
     public static void task7 () {
         System.out.println("Задача 7");
         int one = 12;
-        int two = 11;
+        int two = 10;
         int three = 10;
         if (one > two && one > three) {
             System.out.println(one);
