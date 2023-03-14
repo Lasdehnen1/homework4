@@ -75,7 +75,7 @@ public class Main {
         } else if (capacity > 60 && capacity <= 102) {
             System.out.println("Есть стоячее место");
         } else {
-            System.out.println("Вагон уже полностью забит");
+            System.out.println("Вагон уже полностью забит.");
         }
     }
 
